@@ -41,11 +41,11 @@
         values('$teachername','$role','$gender','$dob','$mobile','$join_date','$qualification','$experience','$username','$email','$password','$district','$country')";
         if (mysqli_query($conn, $sql))
         {
-            $_SESSION['msg']="Student Registered Successfully !!";
+            $_SESSION['msg']="Teache Registered Successfully !!";
         }
         else
         {
-            $_SESSION['msg']="Error : Student  not Register";
+            $_SESSION['msg']="Error : teacher not Registered";
 
         }
 

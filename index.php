@@ -53,5 +53,5 @@
 </body>
 </html>
 <?php }else{
-	header("Location: home.php");
+	header("Location: logout.php");
 } ?>

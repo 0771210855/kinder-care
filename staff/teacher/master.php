@@ -145,7 +145,7 @@
 <a href="exam.html"><i class="fas fa-clipboard-list"></i> <span>Exam time table</span></a>
 </li>
 <li>
-<a href="event.html"><i class="fas fa-calendar-day"></i> <span>Events</span></a>
+<a href="add_assignment.php"><i class="fas fa-calendar-day"></i> <span>Assignment</span></a>
 </li>
 <li>
 <a href="time-table.html"><i class="fas fa-table"></i> <span>Time Table</span></a>

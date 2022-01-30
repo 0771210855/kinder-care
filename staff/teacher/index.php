@@ -169,7 +169,7 @@ include('master.php');
 <div class="card-header">
 <div class="row align-items-center">
 <div class="col-12">
-<h5 class="card-title">Tearm Progress</h5>
+<h5 class="card-title">Lesson Progressed</h5>
 </div>
 </div>
 </div>
@@ -180,8 +180,8 @@ include('master.php');
 </div>
 </div>
 <div class="dash-info">
-<h6>Lesson Progressed</h6>
-<h4>40 <span>/ 60</span></h4>
+<h6>Tearm Progress</h6>
+<h4> 12.5<span>/ 14</span></h4>
 </div>
 </div>
 </div>

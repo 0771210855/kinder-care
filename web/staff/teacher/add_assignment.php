@@ -33,59 +33,57 @@ include('master.php');
 <h5 class="card-title">One character per box from A to Z</h5>
 </div>
 <div class="card-body">
-<form action="#">
+<form action="../../php/add_assignment.php" method="POST">
 <div class="row">
 <div class="col-md-12">
-<h5 class="card-title">Personal details</h5>
+<h5 class="card-title">Character boxes</h5>
 <div class="row">
 <div class="col-md-3">
 <div class="form-group">
-<label>First Name:</label>
-<input type="text" class="form-control">
+<label>Char 1:</label>
+<input type="text" name="char_1" pattern="[A-Z]" maxlength="1" class="form-control">
 </div>
 </div>
 <div class="col-md-3">
 <div class="form-group">
-<label>Last Name:</label>
-<input type="text" class="form-control">
+<label>Char 2:</label>
+<input type="text" name="char_2" pattern="[A-Z]" maxlength="1" class="form-control">
 </div>
 </div>
 <div class="col-md-3">
 <div class="form-group">
-<label>Last Name:</label>
-<input type="text" class="form-control">
+<label>Char 3:</label>
+<input type="text" name="char_3" pattern="[A-Z]" maxlength="1" class="form-control">
 </div>
 </div>
 <div class="col-md-3">
 <div class="form-group">
-<label>Last Name:</label>
-<input type="text" class="form-control">
+<label>Char 4:</label>
+<input type="text" name="char_4" pattern="[A-Z]" maxlength="1" class="form-control">
 </div>
 </div>
 <div class="col-md-3">
 <div class="form-group">
-<label>Last Name:</label>
-<input type="text" class="form-control">
+<label>Char 5:</label>
+<input type="text" name="char_5" pattern="[A-Z]" maxlength="1" class="form-control">
 </div>
 </div>
 <div class="col-md-3">
 <div class="form-group">
-<label>Last Name:</label>
-<input type="text" class="form-control">
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-md-3">
-<div class="form-group">
-<label>Email:</label>
-<input type="text" class="form-control">
+<label>Char 6:</label>
+<input type="text" name="char_6" pattern="[A-Z]" maxlength="1" class="form-control">
 </div>
 </div>
 <div class="col-md-3">
 <div class="form-group">
-<label>Phone:</label>
-<input type="text" class="form-control">
+<label>Char 7:</label>
+<input type="text" name="char_7" pattern="[A-Z]" maxlength="1" class="form-control">
+</div>
+</div>
+<div class="col-md-3">
+<div class="form-group">
+<label>Char 8:</label>
+<input type="text" name="char_8" pattern="[A-Z]" maxlength="1" class="form-control">
 </div>
 </div>
 </div>
@@ -94,21 +92,22 @@ include('master.php');
 <div class="row">
 <div class="col-md-6">
 <div class="form-group">
-<label>Address line:</label>
-<input type="datetime-local" class="form-control">
+<label>start time:</label>
+<input type="datetime-local" name="start_time" class="form-control">
 </div>
 </div>
+
 <div class="col-md-6">
 <div class="form-group">
-<label>Address line:</label>
-<input type="datetime-local" class="form-control">
+<label>End time:</label>
+<input type="datetime-local" name="end_time" class="form-control">
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="text-end">
-<button type="submit" class="btn btn-primary">Submit</button>
+<button type="submit" name="assignment_submit" class="btn btn-primary">Submit</button>
 </div>
 </form>
 </div>

@@ -20,7 +20,8 @@ include('master.php');
 <div class="col">
 <h3 class="page-title">Assignment</h3>
 <ul class="breadcrumb">
-<li class="breadcrumb-item">Assignment can be up to 8 characters</li>
+<li class="breadcrumb-item"><p class="text-success"><?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?></li>
+
 </ul>
 </div>
 </div>

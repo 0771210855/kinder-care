@@ -7,7 +7,7 @@
     if(isset($_POST['assignment_submit']))
     {
 
-
+        $teacher_id = $_SESSION['id'];
 
         $char_1=$_POST['char_1'];
 
@@ -31,10 +31,8 @@
 
 
 
-
-        // $pincode = rand(100000,999999);
-        $sql= "insert into staff(char_1,char_2,char_3,dob,mobile,join_date,qualification,experience,username,email,password,district,country) 
-        values('$char_1','$char_2','$char_3','$char_4','$char_5','$char_6','$char_7','$char_8','$start_time','$end_time')";
+        $sql= "insert into assignment(teacher_id,char_1,char_2,char_3,char_4,char_5,char_6,char_7,char_8,start_time,end_time) 
+        values('$teacher_id','$char_1','$char_2','$char_3','$char_4','$char_5','$char_6','$char_7','$char_8','$start_time','$end_time')";
         if (mysqli_query($conn, $sql))
         {
             $_SESSION['msg']="Assignment added Successfully !!";
@@ -43,9 +41,10 @@
         {
             $_SESSION['msg']="Error : Asignment not added try again";
 
+
         }
 
-        header("Location: ../staff/admin/add_teacher.php");
+        header("Location: ../staff/teacher/add_assignment.php");
     }
     
 

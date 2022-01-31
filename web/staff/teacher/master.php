@@ -66,7 +66,7 @@
 <a href="#">
 <div class="media d-flex">
 <span class="avatar avatar-sm flex-shrink-0">
-<img class="avatar-img rounded-circle" alt="User Image" src="../../assets/img/profiles/avatar-02.jpg">
+<img class="avatar-img rounded-circle" alt="User Image" src="../../assets/img/profiles/avatar-01.png">
 </span>
 <div class="media-body flex-grow-1">
 <p class="noti-details"><span class="noti-title">Carlson Tech</span> has approved <span class="noti-title">your estimate</span></p>
@@ -96,12 +96,12 @@
 
 <li class="nav-item dropdown has-arrow">
 <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
-<span class="user-img"><img class="rounded-circle" src="../../assets/img/profiles/avatar-01.jpg" width="31" alt="Ryan Taylor"></span>
+<span class="user-img"><img class="rounded-circle" src="../../assets/img/profiles/avatar-01.png" width="31" alt="Ryan Taylor"></span>
 </a>
 <div class="dropdown-menu">
 <div class="user-header">
 <div class="avatar avatar-sm">
-<img src="../../assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle">
+<img src="../../assets/img/profiles/avatar-01.PNG" alt="User Image" class="avatar-img rounded-circle">
 </div>
 <div class="user-text">
 <h6>Nakai Janet</h6>
@@ -143,17 +143,17 @@
 <li class="submenu">
 <a href="#"><i class="fas fa-calendar-day"></i> <span>Assignments</span> <span class="menu-arrow"></span></a>
 <ul>
-<li><a href="students.html">Add Assignment</a></li>
-<li><a href="students.html">View Assignment list</a></li>
+<li><a href="add_assignment.php">Add Assignment</a></li>
+<li><a href="assignment_list.php">View Assignment list</a></li>
 
 </ul>
 </li>
 
 <li>
-<a href="exam.html"><i class="fas fa-clipboard-list"></i> <span>Exam time table</span></a>
+<a href="#"><i class="fas fa-clipboard-list"></i> <span>Exam time table</span></a>
 </li>
 <li>
-<a href="time-table.html"><i class="fas fa-table"></i> <span>Time Table</span></a>
+<a href="#"><i class="fas fa-table"></i> <span>Time Table</span></a>
 </li>
 
 

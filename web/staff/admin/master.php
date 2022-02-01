@@ -68,8 +68,8 @@
 <img class="avatar-img rounded-circle" alt="User Image" src="../../assets/img/profiles/avatar-02.jpg">
 </span>
 <div class="media-body flex-grow-1">
-<p class="noti-details"><span class="noti-title">Carlson Tech</span> has approved <span class="noti-title">your estimate</span></p>
-<p class="noti-time"><span class="notification-time">4 mins ago</span></p>
+<p class="noti-details"><span class="noti-title">Managing Director</span> has approved <span class="noti-title">your tearm estimate</span></p>
+<p class="noti-time"><span class="notification-time">30 mins ago</span></p>
 </div>
 </div>
 </a>
@@ -81,8 +81,8 @@
 <img class="avatar-img rounded-circle" alt="User Image" src="../../assets/img/profiles/avatar-11.jpg">
 </span>
 <div class="media-body flex-grow-1">
-<p class="noti-details"><span class="noti-title">International Software Inc</span> has sent you a invoice in the amount of <span class="noti-title">$218</span></p>
-<p class="noti-time"><span class="notification-time">6 mins ago</span></p>
+<p class="noti-details"><span class="noti-title">Burser KiderCare</span> has sent you a invoice in the amount of <span class="noti-title">UGX 200,000</span></p>
+<p class="noti-time"><span class="notification-time">6 hrs ago</span></p>
 </div>
 </div>
 </a>
@@ -128,15 +128,7 @@
 <a href="#"><i class="fas fa-vector-square"></i> <span> Dashboard</span></span></a>
 
 </li>
-<li class="submenu">
-<a href="#"><i class="fas fa-user-graduate"></i> <span> Pupil</span> <span class="menu-arrow"></span></a>
-<ul>
-<li><a href="students.html">Pupil List</a></li>
-<li><a href="add_pupil.php">Pupil Add</a></li>
-<li><a href="student-details.html">Pupil View</a></li>
-<li><a href="edit-student.html">Pupil Edit</a></li>
-</ul>
-</li>
+
 <li class="submenu">
 <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span class="menu-arrow"></span></a>
 <ul>

@@ -69,7 +69,7 @@
 <img class="avatar-img rounded-circle" alt="User Image" src="../../assets/img/profiles/avatar-01.png">
 </span>
 <div class="media-body flex-grow-1">
-<p class="noti-details"><span class="noti-title">Carlson Tech</span> has approved <span class="noti-title">your estimate</span></p>
+<p class="noti-details"><span class="noti-title">Head teacher Kindercare</span> has approved your <span class="noti-title">project Proposal</span></p>
 <p class="noti-time"><span class="notification-time">4 mins ago</span></p>
 </div>
 </div>
@@ -82,8 +82,8 @@
 <img class="avatar-img rounded-circle" alt="User Image" src="../../assets/img/profiles/avatar-11.jpg">
 </span>
 <div class="media-body flex-grow-1">
-<p class="noti-details"><span class="noti-title">International Software Inc</span> has sent you a invoice in the amount of <span class="noti-title">$218</span></p>
-<p class="noti-time"><span class="notification-time">6 mins ago</span></p>
+<p class="noti-details"><span class="noti-title">Burser Kindercare</span> deposted your salary amount of <span class="noti-title">UGX 400,000</span></p>
+<p class="noti-time"><span class="notification-time">40 mins ago</span></p>
 </div>
 </div>
 </a>
@@ -132,12 +132,15 @@
 <li class="submenu">
 <a href="#"><i class="fas fa-user-graduate"></i> <span> Pupil</span> <span class="menu-arrow"></span></a>
 <ul>
-<li><a href="students.html">Pupil List</a></li>
+<li><a href="add_pupil.php">Pupil Add</a></li>
+<li><a href="pupil_list.php">Pupil List</a></li>
+<li><a href="#">Pupil View</a></li>
+<li><a href="#">Pupil Edit</a></li>
 </ul>
 </li>
 
 <li class="menu-title">
-<span>Management</span>
+<span>Academics</span>
 </li>
 
 <li class="submenu">
@@ -150,10 +153,10 @@
 </li>
 
 <li>
-<a href="#"><i class="fas fa-clipboard-list"></i> <span>Exam time table</span></a>
+<a href="view_results.php"><i class="fas fa-clipboard-list"></i> <span>Pupil Results</span></a>
 </li>
 <li>
-<a href="#"><i class="fas fa-table"></i> <span>Time Table</span></a>
+<a href="#"><i class="fas fa-table"></i> <span>Time Tables</span></a>
 </li>
 
 

@@ -7,34 +7,18 @@
     
     if(isset($_POST['add_pupil']))
     {
-        // $pupil_id=$_POST['teacher_id'];
 
         $fname=$_POST['fname'];
 
         $lname=$_POST['lname'];
 
-        $gender=$_POST['gender'];  
+        $user_code=$_POST['user_code'];  
 
-        $dob=$_POST['dob'];
+        $contact=$_POST['phone'];
         
-        $class=$_POST['class'];
 
-        $religion=$_POST['religion'];
-
-        $password=md5($_POST['password']);
-
-        $gurdian_name=$_POST['gurdian_name'];
-
-        $gurdian_occupation=$_POST['gurdian_occupation'];
-
-        $gurdian_mobile=$_POST['gurdian_mobile'];
-
-        $address=$_POST['address'];
-
-
-        // $pincode = rand(100000,999999);
-        $sql= "insert into pupils(fname,lname,gender,dob,class,religion,password,gurdian_name,gurdian_occupation,gurdian_mobile,address) 
-        values('$fname','$lname','$gender','$dob','$class','$religion','$password','$gurdian_name','$gurdian_occupation','$gurdian_mobile','$address')";
+        $sql= "insert into pupils(fname,lname,contact,user_code) 
+        values('$fname','$lname','$contact','$user_code')";
         if (mysqli_query($conn, $sql))
         {
             $_SESSION['msg']="Pupil Registered Successfully !!";
@@ -45,7 +29,7 @@
 
         }
 
-        header("Location: ../staff/admin/add_pupil.php");
+        header("Location: ../staff/teacher/add_pupil.php");
     }
     
 

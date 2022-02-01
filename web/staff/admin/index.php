@@ -31,7 +31,7 @@ include('master.php');
 <i class="fas fa-user-graduate"></i>
 </div>
 <div class="db-info">
-<h3>50055</h3>
+<h3>50</h3>
 <h6>Pupils</h6>
 </div>
 </div>

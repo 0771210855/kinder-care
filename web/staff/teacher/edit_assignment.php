@@ -6,9 +6,10 @@
 	if (isset($_GET['edit'])) {
 		$id = $_GET['edit'];
 		$update = true;
-		$record = mysqli_query($conn, "SELECT * FROM assignment WHERE id=$id");
+		$record = mysqli_query($conn, "SELECT * FROM assignment WHERE id='$id'");
 
 			$n = mysqli_fetch_array($record);
+			
 			$char_1 = $n['char_1'];
 			$char_2 = $n['char_2'];
             $char_3 = $n['char_3'];
@@ -38,7 +39,7 @@ include('master.php');
 <div class="page-header">
 <div class="row">
 <div class="col">
-<h3 class="page-title">Assignment</h3>
+<h3 class="page-title">Assignment with id <?php echo $id; ?></h3>
 <ul class="breadcrumb">
 <li class="breadcrumb-item"><p class="text-success"><?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?></li>
 
@@ -54,7 +55,7 @@ include('master.php');
 <h5 class="card-title">One character per box from A to Z</h5>
 </div>
 <div class="card-body">
-<form action="../../php/edit_assignment.php" method="POST">
+<form action="../../php/edit_assignment.php?id=<?php echo $id; ?>" method="POST">
 <div class="row">
 <div class="col-md-12">
 <h5 class="card-title">Character boxes</h5>

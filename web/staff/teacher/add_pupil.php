@@ -16,7 +16,7 @@ include('master.php');
             <div class="col">
                <h3 class="page-title">Add a Pupil</h3>
                <ul class="breadcrumb">
-               <li class="breadcrumb-item"><p class="text-success"><?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?></p></li>
+               <li class="breadcrumb-item"><p class="text-success"><?php echo htmlentities($_SESSION['msg']);?></p></li>
                </ul>
             </div>
          </div>
@@ -54,8 +54,8 @@ include('master.php');
                      
                      <div class="col-12 col-sm-6">
                         <div class="form-group">
-                           <label>User code</label>
-                           <input type="text" name="user_code" maxlength="5" required  class="form-control">
+                           <label>User code [4 characters]</label>
+                           <input type="text" name="user_code" pattern="[A-Z0-9]" minlength="4" maxlength="4" required  class="form-control" placeholder="AA11">
                         <div>
                      </div>
                      </div>

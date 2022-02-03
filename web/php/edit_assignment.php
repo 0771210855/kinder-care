@@ -6,6 +6,8 @@
         
     if (isset($_POST['update'])) {
 
+      $id = $_GET['id'];
+      // $id=$_POST['id'];
         $char_1=$_POST['char_1'];
 
         $char_2=$_POST['char_2'];
@@ -27,11 +29,8 @@
 
         $end_time=$_POST['end_time'];
 
-        $sql="UPDATE assignment SET char_1='$char_1', char_2='$char_2', char_3='$char_3', char_4='$char_4', char_5='$char_5', char_6='$char_6', char_7='$char_7', char_8='$char_8', start_time='$start_time',end_time='$end_time' WHERE id=$id";
-        
-        
-        
-        
+        $sql="UPDATE assignment SET char_1='$char_1', char_2='$char_2', char_3='$char_3', char_4='$char_4', char_5='$char_5', char_6='$char_6', char_7='$char_7', char_8='$char_8', start_time='$start_time',end_time='$end_time' WHERE id='$id'";
+
         if (mysqli_query($conn, $sql))
         {
             $_SESSION['msg']="Assignment added Successfully !!";

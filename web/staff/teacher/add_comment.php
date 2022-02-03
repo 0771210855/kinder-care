@@ -13,10 +13,20 @@
 			$pupil_id = $n['pupil_id'];
             $result_mark = $n['result_mark'];
 			$comment = $n['teacher_comment'];
+
+			
+			$rec = mysqli_query($conn, "SELECT * FROM pupils WHERE id=$pupil_id");
+			
+			
+
+			$p = mysqli_fetch_assoc($rec);
+
+			$user_code = $p['user_code'];
+			$fname = $p['fname'];
 		
 	}
 
-
+	
 include('master.php');
 ?>
 
@@ -28,9 +38,9 @@ include('master.php');
 <div class="page-header">
 <div class="row">
 <div class="col">
-<h3 class="page-title">pupil number <?php echo $pupil_id; ?>' results</h3>
+<h3 class="page-title">Comments and results</h3>
 <ul class="breadcrumb">
-<li class="breadcrumb-item"><p class="text-success"><?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?></li>
+<li class="breadcrumb-item"></li>
 
 </ul>
 </div>
@@ -44,10 +54,10 @@ include('master.php');
 <h5 class="card-title">Add or edit the pupils comment in the comment field</h5>
 </div>
 <div class="card-body">
-<form action="../../php/edit_assignment.php" method="POST">
+<form action="../../php/add_comment.php" method="POST">
 <div class="row">
 <div class="col-md-12">
-<h5 class="card-title">Character boxes</h5>
+<h5 class="card-title" style="font-size:16px">user code: <span style="color:blue"><?php echo $user_code; ?></span>       First Name: <span style="color:blue"><?php echo $fname; ?></span></h5>
 <div class="row">
 <div class="col-md-4">
 <div class="form-group">

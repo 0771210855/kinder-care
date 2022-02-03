@@ -156,7 +156,7 @@
 <a href="view_results.php"><i class="fas fa-clipboard-list"></i> <span>Pupil Results</span></a>
 </li>
 <li>
-<a href="#"><i class="fas fa-table"></i> <span>Time Tables</span></a>
+<a href="actvation_request.php"><i class="fas fa-table"></i> <span>activation requests</span></a>
 </li>
 
 

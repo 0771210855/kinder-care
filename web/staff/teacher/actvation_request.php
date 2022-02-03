@@ -4,7 +4,7 @@
    if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   
 
 
-    $sql = "SELECT * FROM results  ORDER BY id ASC";
+    $sql = "SELECT * FROM Actvation_request  ORDER BY id ASC";
     $res = mysqli_query($conn, $sql);
 
 include('master.php');
@@ -22,9 +22,9 @@ include('master.php');
 <div class="page-header">
 <div class="row align-items-center">
 <div class="col">
-<h3 class="page-title">Assignment Results</h3>
+<h3 class="page-title">Activation request list</h3>
 <ul class="breadcrumb">
-<li class="breadcrumb-item"><a href="#">use the blue edit button to add or edit a comment of a particular pupil assignment</a></li>
+<li class="breadcrumb-item"><a href="#">Requests of deactvated pupils for activation</a></li>
 </ul>
 </div>
 </div>
@@ -42,10 +42,8 @@ include('master.php');
 <th>#</th>
 <th>user_code</th>
 <th>pupil name</th>
-<th>Assignment number</th>
-<th>Marks in %</th>
-<th>Comments</th>
-<th class="text-end">Action</th>
+<th>Date of request</th>
+<th class="text-end">take status action</th>
 </tr>
 </thead>
 <tbody>
@@ -72,14 +70,13 @@ while ( $rows= mysqli_fetch_assoc($res)) {
 <th scope="row"><?=$i?></th>
 <th scope="row"><?=$user_code?></th>
 <td><?=$fname?> <?=$lname?></td>
-<td><?=$rows['assignment_id']?></td>
-<td><?=$rows['result_mark']?></td>
-<td><?=$rows['teacher_comment']?></td>
+<td><?=$rows['created_at']?></td>
+
 
 <td class="text-end">
 <div class="actions">
-<a href="add_comment.php?edit=<?php echo $rows['id']; ?>" class="btn btn-sm bg-success-light me-2">
-<i class="fas fa-pen"></i>
+<a href="pupil_list.php" class="btn btn-sm bg-primary-light me-2">
+<i class="fas fa-check"></i>
 </a>
 </div>
 </td>

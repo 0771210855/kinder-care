@@ -64,25 +64,27 @@ while (/*$rows = mysqli_fetch_assoc($res))*/ $rows= mysqli_fetch_assoc($res)) {
 
 <td class="text-end">
  <div class="actions">
+
+ <form method="post" action="../../php/change_status.php?id=<?=$rows['id']?>">
+
     <?php
+    
 if($rows['status'] == 'inactive'){
     
 ?>
-<a href="change_status.php" class="btn btn-sm bg-success-light me-2">
-<p>active</p>
-</a>
+<input type="submit" name="activate" value="activate" class="btn btn-sm bg-success">
+
 <?php
  }else{
     ?>
+<input type="submit" name="deactvate" value="de-activate" class="btn btn-sm bg-warning">
 
-    <a href="change_status.php" class="btn btn-sm bg-success-light me-2">
-    <p>In active</p>
-    </a>
-    
+
 <?php
 
  }
 ?>
+</form>
 
 </div>
 

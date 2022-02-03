@@ -54,7 +54,7 @@ include('master.php');
 <h5 class="card-title">Add or edit the pupils comment in the comment field</h5>
 </div>
 <div class="card-body">
-<form action="../../php/add_comment.php" method="POST">
+<form action="../../php/add_comment.php?id=<?php echo $id; ?>" method="POST">
 <div class="row">
 <div class="col-md-12">
 <h5 class="card-title" style="font-size:16px">user code: <span style="color:blue"><?php echo $user_code; ?></span>       First Name: <span style="color:blue"><?php echo $fname; ?></span></h5>

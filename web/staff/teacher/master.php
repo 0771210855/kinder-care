@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 <title>Kindercare teacher</title>
 
-<link rel="shortcut icon" href="../../assets/img/favicon.png">
+<link rel="shortcut icon" href="../../assets/img/kinn.">
 
 <link rel="stylesheet" href="../../assets/plugins/bootstrap/css/bootstrap.min.css">
 
@@ -25,7 +25,7 @@
 
 <div class="header-left">
 <a href="index-2.html" class="logo">
-<img src="../../assets/img/logo.png" alt="Logo">
+<img src="../../assets/img/kinn.jfif" alt="Logo">
 </a>
 <a href="index-2.html" class="logo logo-small">
 <img src="../../assets/img/logo-small.png" alt="Logo" width="30" height="30">

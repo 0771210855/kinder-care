@@ -17,7 +17,7 @@
         $contact=$_POST['phone'];
         
 
-        $sql= "insert into pupils(fname,lname,contact,user_code) 
+        $sql= "insert into pupils(firstname,lastname,phonenumber,user_code) 
         values('$fname','$lname','$contact','$user_code')";
         if (mysqli_query($conn, $sql))
         {

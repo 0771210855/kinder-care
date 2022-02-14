@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 <title>Kindercare admin</title>
 
-<link rel="shortcut icon" href="../../assets/img/favicon.png">
+<link rel="shortcut icon" href="../../assets/img/kinn.jfif">
 
 <link rel="stylesheet" href="../../assets/plugins/bootstrap/css/bootstrap.min.css">
 

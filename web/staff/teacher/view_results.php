@@ -40,6 +40,7 @@ include('master.php');
 <thead>
 <tr>
 <th>#</th>
+<th>user_code</th>
 <th>pupil name</th>
 <th>Assignment number</th>
 <th>Marks in %</th>
@@ -52,12 +53,25 @@ include('master.php');
 
 <?php 
 $i =1;
-while (/*$rows = mysqli_fetch_assoc($res))*/ $rows= mysqli_fetch_assoc($res)) {
+while ( $rows= mysqli_fetch_assoc($res)) {
+
+    $pupil_id=$rows['pupil_id'];
+
+    $rec = mysqli_query($conn, "SELECT * FROM pupils WHERE id=$pupil_id");
+			
+			
+
+    $p = mysqli_fetch_assoc($rec);
+
+    $lname = $p['lname'];
+    $fname = $p['fname'];
+    $user_code = $p['user_code'];
 
 ?>
 <tr>
 <th scope="row"><?=$i?></th>
-<td><?=$rows['pupil_id']?></td>
+<th scope="row"><?=$user_code?></th>
+<td><?=$fname?> <?=$lname?></td>
 <td><?=$rows['assignment_id']?></td>
 <td><?=$rows['result_mark']?></td>
 <td><?=$rows['teacher_comment']?></td>

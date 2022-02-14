@@ -55,7 +55,7 @@ include('master.php');
                      <div class="col-12 col-sm-6">
                         <div class="form-group">
                            <label>User code [4 characters]</label>
-                           <input type="text" name="user_code" pattern="[A-Z0-9]" minlength="4" maxlength="4" required  class="form-control" placeholder="AA11">
+                           <input type="text" name="user_code" minlength="4" maxlength="4" required  class="form-control" placeholder="AA11">
                         <div>
                      </div>
                      </div>

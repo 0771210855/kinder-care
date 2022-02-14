@@ -4,7 +4,7 @@
    if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   
 
 
-    $sql = "SELECT * FROM pupils  ORDER BY id ASC";
+    $sql = "SELECT * FROM Actvation_request  ORDER BY id ASC";
     $res = mysqli_query($conn, $sql);
 
 include('master.php');
@@ -22,9 +22,9 @@ include('master.php');
 <div class="page-header">
 <div class="row align-items-center">
 <div class="col">
-<h3 class="page-title">Pupil list</h3>
+<h3 class="page-title">Activation request list</h3>
 <ul class="breadcrumb">
-<li class="breadcrumb-item"><a href="#">A list of all registerd students both active and deactivated</a></li>
+<li class="breadcrumb-item"><a href="#">Requests of deactvated pupils for activation</a></li>
 </ul>
 </div>
 </div>
@@ -40,11 +40,10 @@ include('master.php');
 <thead>
 <tr>
 <th>#</th>
-<th>User Code</th>
-<th>First name</th>
-<th>Last name</th>
-<th>Phone Contact</th>
-<th class="text-end">status</th>
+<th>user_code</th>
+<th>pupil name</th>
+<th>Date of request</th>
+<th class="text-end">take status action</th>
 </tr>
 </thead>
 <tbody>
@@ -52,42 +51,34 @@ include('master.php');
 
 <?php 
 $i =1;
-while (/*$rows = mysqli_fetch_assoc($res))*/ $rows= mysqli_fetch_assoc($res)) {
+while ( $rows= mysqli_fetch_assoc($res)) {
+
+    $pupil_id=$rows['pupil_id'];
+
+    $rec = mysqli_query($conn, "SELECT * FROM pupils WHERE id=$pupil_id");
+			
+			
+
+    $p = mysqli_fetch_assoc($rec);
+
+    $lname = $p['lname'];
+    $fname = $p['fname'];
+    $user_code = $p['user_code'];
 
 ?>
 <tr>
 <th scope="row"><?=$i?></th>
-<td><?=$rows['user_code']?></td>
-<td><?=$rows['firstname']?></td>
-<td><?=$rows['lastname']?></td>
-<td><?=$rows['phonenumber']?></td>
+<th scope="row"><?=$user_code?></th>
+<td><?=$fname?> <?=$lname?></td>
+<td><?=$rows['created_at']?></td>
+
 
 <td class="text-end">
- <div class="actions">
-
- <form method="post" action="../../php/change_status.php?id=<?=$rows['id']?>">
-
-    <?php
-    
-if($rows['status'] == 'inactive'){
-    
-?>
-<input type="submit" name="activate" value="activate" class="btn btn-sm bg-success">
-
-<?php
- }else{
-    ?>
-<input type="submit" name="deactvate" value="de-activate" class="btn btn-sm bg-warning">
-
-
-<?php
-
- }
-?>
-</form>
-
+<div class="actions">
+<a href="pupil_list.php" class="btn btn-sm bg-primary-light me-2">
+<i class="fas fa-check"></i>
+</a>
 </div>
-
 </td>
 </tr>
 <?php $i++; }?>

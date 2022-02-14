@@ -29,6 +29,10 @@
 
         $end_time=$_POST['end_time'];
 
+        $start_time=$_POST['start_time'];
+
+        $end_time=$_POST['end_time'];
+
 
 
         $sql= "insert into assignment(teacher_id,char_1,char_2,char_3,char_4,char_5,char_6,char_7,char_8,start_time,end_time) 

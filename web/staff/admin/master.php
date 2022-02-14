@@ -23,10 +23,10 @@
 <div class="header">
 
 <div class="header-left">
-<a href="index-2.html" class="logo">
+<a href="index.php" class="logo">
 <img src="../../assets/img/logo.png" alt="Logo">
 </a>
-<a href="index-2.html" class="logo logo-small">
+<a href="index.php" class="logo logo-small">
 <img src="../../assets/img/logo-small.png" alt="Logo" width="30" height="30">
 </a>
 </div>
@@ -95,16 +95,12 @@
 
 <li class="nav-item dropdown has-arrow">
 <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
-<span class="user-img"><img class="rounded-circle" src="../../assets/img/profiles/avatar-01.jpg" width="31" alt="Ryan Taylor"></span>
+<span class="user-img">Admin</span>
 </a>
 <div class="dropdown-menu">
 <div class="user-header">
 <div class="avatar avatar-sm">
-<img src="../../assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle">
-</div>
-<div class="user-text">
-<h6>Ryan Taylor</h6>
-<p class="text-muted mb-0">Administrator</p>
+    
 </div>
 </div>
 <a class="dropdown-item" href="#">My Profile</a>
@@ -132,33 +128,10 @@
 <li class="submenu">
 <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span class="menu-arrow"></span></a>
 <ul>
-<li><a href="teachers.html">Teacher List</a></li>
-<li><a href="teacher-details.html">Teacher View</a></li>
 <li><a href="add_teacher.php">Teacher Add</a></li>
 </ul>
 </li>
 
-<li class="menu-title">
-<span>Management</span>
-</li>
-<li class="submenu">
-<a href="#"><i class="fas fa-file-invoice-dollar"></i> <span> Accounts</span> <span class="menu-arrow"></span></a>
-<ul>
-<li><a href="fees-collections.html">Fees Collection</a></li>
-<li><a href="expenses.html">Expenses</a></li>
-<li><a href="salary.html">Salary</a></li>
-</ul>
-</li>
-
-<li>
-<a href="exam.html"><i class="fas fa-clipboard-list"></i> <span>Exam list</span></a>
-</li>
-<li>
-<a href="event.html"><i class="fas fa-calendar-day"></i> <span>Events</span></a>
-</li>
-<li>
-<a href="time-table.html"><i class="fas fa-table"></i> <span>Time Table</span></a>
-</li>
 
 
 </ul>

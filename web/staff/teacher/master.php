@@ -66,7 +66,8 @@
 <a href="#">
 <div class="media d-flex">
 <span class="avatar avatar-sm flex-shrink-0">
-<img class="avatar-img rounded-circle" alt="User Image" src="../../assets/img/profiles/avatar-01.png">
+<!-- <img class="avatar-img rounded-circle" alt="User Image" src="../../assets/img/profiles/avatar-01.png"> -->
+    Teacher
 </span>
 <div class="media-body flex-grow-1">
 <p class="noti-details"><span class="noti-title">Head teacher Kindercare</span> has approved your <span class="noti-title">project Proposal</span></p>
@@ -79,7 +80,7 @@
 <a href="#">
 <div class="media d-flex">
 <span class="avatar avatar-sm flex-shrink-0">
-<img class="avatar-img rounded-circle" alt="User Image" src="../../assets/img/profiles/avatar-11.jpg">
+<!-- <img class="avatar-img rounded-circle" alt="User Image" src="../../assets/img/profiles/avatar-11.jpg"> -->
 </span>
 <div class="media-body flex-grow-1">
 <p class="noti-details"><span class="noti-title">Burser Kindercare</span> deposted your salary amount of <span class="noti-title">UGX 400,000</span></p>
@@ -96,12 +97,12 @@
 
 <li class="nav-item dropdown has-arrow">
 <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
-<span class="user-img"><img class="rounded-circle" src="../../assets/img/profiles/avatar-01.png" width="31" alt="Ryan Taylor"></span>
+<!-- <span class="user-img"><img class="rounded-circle" src="../../assets/img/profiles/avatar-01.png" width="31" alt="Ryan Taylor"></span> -->
 </a>
 <div class="dropdown-menu">
 <div class="user-header">
 <div class="avatar avatar-sm">
-<img src="../../assets/img/profiles/avatar-01.PNG" alt="User Image" class="avatar-img rounded-circle">
+<!-- <img src="../../assets/img/profiles/avatar-01.PNG" alt="User Image" class="avatar-img rounded-circle"> -->
 </div>
 <div class="user-text">
 <h6>Nakai Janet</h6>

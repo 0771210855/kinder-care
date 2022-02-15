@@ -55,25 +55,26 @@ include('master.php');
 $i =1;
 while ( $rows= mysqli_fetch_assoc($res)) {
 
-    $pupil_id=$rows['pupil_id'];
+    $pupil_id=$rows['user_code'];
 
-    $rec = mysqli_query($conn, "SELECT * FROM pupils WHERE id=$pupil_id");
+    $rec = mysqli_query($conn, "SELECT * FROM pupils WHERE user_code='$pupil_id'");
 			
-			
-
+		
     $p = mysqli_fetch_assoc($rec);
 
-    $lname = $p['lname'];
-    $fname = $p['fname'];
+    $lname = $p['lastname'];
+    $fname = $p['firstname'];
     $user_code = $p['user_code'];
+
+    
 
 ?>
 <tr>
 <th scope="row"><?=$i?></th>
 <th scope="row"><?=$user_code?></th>
 <td><?=$fname?> <?=$lname?></td>
-<td><?=$rows['assignment_id']?></td>
-<td><?=$rows['result_mark']?></td>
+<td><?=$rows['assignmentID']?></td>
+<td><?=$rows['average']?></td>
 <td><?=$rows['teacher_comment']?></td>
 
 <td class="text-end">

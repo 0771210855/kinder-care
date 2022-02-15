@@ -49,7 +49,7 @@
 
         }
 
-        header("Location: ../staff/admin/add_teacher.php");
+        header("Location: ../staff/admin/index.php");
     }
     
 

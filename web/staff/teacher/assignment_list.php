@@ -4,7 +4,8 @@
    if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   
 
 
-    $sql = "SELECT * FROM assignment ORDER BY id ASC";
+    $sql = "SELECT * FROM assignment ORDER BY assignmentID ASC ";
+    
     $res = mysqli_query($conn, $sql);
 
 include('master.php');
@@ -62,11 +63,11 @@ include('master.php');
 
 <?php 
 $i =1;
-while (/*$rows = mysqli_fetch_assoc($res))*/ $rows= mysqli_fetch_assoc($res)) {?>
+while (/*$rows = mysqli_fetch_assoc($res))*/ $rows= mysqli_fetch_array($res)) { /*$rows = $res->fetch_assoc()){*/?>
 
 
 <tr>
-<th scope="row"><?=$i?></th>
+<th scope="rows"><?=$i?></th>
 <td><?=$rows['char_1']?></td>
 <td><?=$rows['char_2']?></td>
 <td><?=$rows['char_3']?></td>
@@ -75,15 +76,16 @@ while (/*$rows = mysqli_fetch_assoc($res))*/ $rows= mysqli_fetch_assoc($res)) {?
 <td><?=$rows['char_6']?></td>
 <td><?=$rows['char_7']?></td>
 <td><?=$rows['char_8']?></td>
-<td><?=$rows['start_time']?></td>
-<td><?=$rows['end_time']?></td>
+<td><?=$rows['start_date']?> <?=$rows['start_time']?></td>
+<td><?=$rows['end_date']?> <?=$rows['end_time']?></td>
 
 <td class="text-end">
 <div class="actions">
-<a href="edit_assignment.php?edit=<?php echo $rows['id']; ?>" class="btn btn-sm bg-success-light me-2">
+<a href="edit_assignment.php?edit=<?php echo $rows['assignmentID']; ?>" class="btn btn-sm bg-success-light me-2">
 <i class="fas fa-pen"></i>
 </a>
-<a href="server.php?del=<?php echo $rows['id']; ?>" class="btn btn-sm bg-danger-light">
+<!-- server.php?del=</*?php echo $rows['assignmentID']; ?> -->
+<a href="#" class="btn btn-sm bg-danger-light">
 <i class="fas fa-trash"></i>
 </a>
 </div>

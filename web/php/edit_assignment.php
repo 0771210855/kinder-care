@@ -29,7 +29,12 @@
 
         $end_time=$_POST['end_time'];
 
-        $sql="UPDATE assignment SET char_1='$char_1', char_2='$char_2', char_3='$char_3', char_4='$char_4', char_5='$char_5', char_6='$char_6', char_7='$char_7', char_8='$char_8', start_time='$start_time',end_time='$end_time' WHERE id='$id'";
+        $start_date=$_POST['start_date'];
+
+
+        $end_date=$_POST['end_date'];
+
+        $sql="UPDATE assignment SET char_1='$char_1', char_2='$char_2', char_3='$char_3', char_4='$char_4', char_5='$char_5', char_6='$char_6', char_7='$char_7', char_8='$char_8', start_time='$start_time',end_time='$end_time' , start_date='$start_date',end_date='$end_date' WHERE assignmentID='$id'";
 
         if (mysqli_query($conn, $sql))
         {

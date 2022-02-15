@@ -6,9 +6,11 @@
 	if (isset($_GET['edit'])) {
 		$id = $_GET['edit'];
 		$update = true;
-		$record = mysqli_query($conn, "SELECT * FROM assignment WHERE id='$id'");
+       var_dump($id);
 
-			$n = mysqli_fetch_array($record);
+		$record = mysqli_query($conn, "SELECT * FROM assignment WHERE assignmentID='$id'");
+
+			$n = mysqli_fetch_assoc($record);
 			
 			$char_1 = $n['char_1'];
 			$char_2 = $n['char_2'];
@@ -24,6 +26,9 @@
 
             $start_time = $n['start_time'];
 			$end_time = $n['end_time'];
+
+			$start_date = $n['start_date'];
+			$end_date = $n['end_date'];
 		
 	}
 
@@ -114,16 +119,34 @@ include('master.php');
 <div class="row">
 <div class="col-md-6">
 <div class="form-group">
+<label>start date:</label>
+<input type="date" name="start_date" value="<?php echo $start_date; ?>" class="form-control">
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
 <label>start time:</label>
-<input type="text" name="start_time" value="<?php echo $start_time; ?>" class="form-control">
+<input type="time" name="start_time" value="<?php echo $start_time; ?>" class="form-control">
+</div>
+</div>
+
+
+</div>
+
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+<label>End date:</label>
+<!-- datetime-local -->
+<input type="date" name="end_date" value="<?php echo $end_date; ?>" class="form-control">
 </div>
 </div>
 
 <div class="col-md-6">
 <div class="form-group">
 <label>End time:</label>
-<!-- datetime-local -->
-<input type="text" name="end_time" value="<?php echo $end_time; ?>" class="form-control">
+
+<input type="time" name="end_time" value="<?php echo $end_time; ?>" class="form-control">
 </div>
 </div>
 </div>

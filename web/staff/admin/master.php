@@ -23,12 +23,8 @@
 <div class="header">
 
 <div class="header-left">
-<a href="index.php" class="logo">
-<img src="../../assets/img/logo.png" alt="Logo">
-</a>
-<a href="index.php" class="logo logo-small">
-<img src="../../assets/img/logo-small.png" alt="Logo" width="30" height="30">
-</a>
+
+
 </div>
 
 <a href="javascript:void(0);" id="toggle_btn">
@@ -128,7 +124,7 @@
 <li class="submenu">
 <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span class="menu-arrow"></span></a>
 <ul>
-<li><a href="add_teacher.php">Teacher Add</a></li>
+<li><a href="#">Teacher Add</a></li>
 </ul>
 </li>
 

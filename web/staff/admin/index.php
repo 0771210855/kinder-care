@@ -17,7 +17,7 @@ include('master.php');
 <div class="col">
 <h3 class="page-title">Add  a Teacher</h3>
 <ul class="breadcrumb">
-<li class="breadcrumb-item"><p class="text-success"><?php echo htmlentities($_SESSION['msg']);?></p></li>
+<li class="breadcrumb-item"><p class="text-success"></p></li>
 
 </ul>
 </div>

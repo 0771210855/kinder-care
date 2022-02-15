@@ -105,7 +105,6 @@
 <!-- <img src="../../assets/img/profiles/avatar-01.PNG" alt="User Image" class="avatar-img rounded-circle"> -->
 </div>
 <div class="user-text">
-<h6>Nakai Janet</h6>
 <p class="text-muted mb-0">Teacher</p>
 </div>
 </div>
@@ -135,8 +134,7 @@
 <ul>
 <li><a href="add_pupil.php">Pupil Add</a></li>
 <li><a href="pupil_list.php">Pupil List</a></li>
-<li><a href="#">Pupil View</a></li>
-<li><a href="#">Pupil Edit</a></li>
+
 </ul>
 </li>
 

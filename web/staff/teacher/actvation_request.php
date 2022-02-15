@@ -4,7 +4,7 @@
    if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   
 
 
-    $sql = "SELECT * FROM Actvation_request  ORDER BY id ASC";
+    $sql = "SELECT * FROM actvation_request  ORDER BY id ASC";
     $res = mysqli_query($conn, $sql);
 
 include('master.php');
@@ -41,7 +41,7 @@ include('master.php');
 <tr>
 <th>#</th>
 <th>user_code</th>
-<th>pupil name</th>
+
 <th>Date of request</th>
 <th class="text-end">take status action</th>
 </tr>
@@ -53,23 +53,23 @@ include('master.php');
 $i =1;
 while ( $rows= mysqli_fetch_assoc($res)) {
 
-    $pupil_id=$rows['pupil_id'];
+    $pupil_id=$rows['user_code'];
 
-    $rec = mysqli_query($conn, "SELECT * FROM pupils WHERE id=$pupil_id");
+    // $rec = mysqli_query($conn, "SELECT * FROM pupils WHERE User_code='$pupil_id'");
 			
 			
 
-    $p = mysqli_fetch_assoc($rec);
+    // $p = mysqli_fetch_assoc($rec);
 
-    $lname = $p['lname'];
-    $fname = $p['fname'];
-    $user_code = $p['user_code'];
+    // $lname = $p['lastname'];
+    // $fname = $p['firstname'];
+    // $user_code = $p['user_code'];
 
 ?>
 <tr>
 <th scope="row"><?=$i?></th>
-<th scope="row"><?=$user_code?></th>
-<td><?=$fname?> <?=$lname?></td>
+<th scope="row"><?=$pupil_id?></th>
+
 <td><?=$rows['created_at']?></td>
 
 

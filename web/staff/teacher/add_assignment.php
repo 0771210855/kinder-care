@@ -94,16 +94,33 @@ include('master.php');
 <div class="col-md-6">
 <div class="form-group">
 <label>start time:</label><span style="color:red">*</span>
-<input type="datetime-local" name="start_time" required class="form-control">
+<input type="time" name="start_time" required class="form-control">
 </div>
 </div>
 
 <div class="col-md-6">
 <div class="form-group">
 <label>End time:</label><span style="color:red">*</span>
-<input type="datetime-local" name="end_time" required class="form-control">
+<input type="time" name="end_time" required class="form-control">
 </div>
 </div>
+
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+<label>start dates:</label><span style="color:red">*</span>
+<input type="date" name="start_date" required class="form-control">
+</div>
+</div>
+
+
+<div class="col-md-6">
+<div class="form-group">
+<label>end date:</label><span style="color:red">*</span>
+<input type="date" name="end_date" required class="form-control">
+</div>
+</div>
+
 </div>
 </div>
 </div>

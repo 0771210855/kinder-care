@@ -29,14 +29,14 @@
 
         $end_time=$_POST['end_time'];
 
-        $start_time=$_POST['start_time'];
+        $start_date=$_POST['start_date'];
 
-        $end_time=$_POST['end_time'];
+        $end_date=$_POST['end_date'];
 
 
 
-        $sql= "insert into assignment(teacher_id,char_1,char_2,char_3,char_4,char_5,char_6,char_7,char_8,start_time,end_time) 
-        values('$teacher_id','$char_1','$char_2','$char_3','$char_4','$char_5','$char_6','$char_7','$char_8','$start_time','$end_time')";
+        $sql= "insert into assignment(teacher_id,char_1,char_2,char_3,char_4,char_5,char_6,char_7,char_8,start_time,end_time,start_date,end_date) 
+        values('$teacher_id','$char_1','$char_2','$char_3','$char_4','$char_5','$char_6','$char_7','$char_8','$start_time','$end_time','$start_date','$end_date')";
         if (mysqli_query($conn, $sql))
         {
             $_SESSION['msg']="Assignment added Successfully !!";
@@ -47,6 +47,7 @@
 
 
         }
+        // var_dump($sql);
 
         header("Location: ../staff/teacher/add_assignment.php");
     }

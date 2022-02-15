@@ -170,7 +170,7 @@ int num_fields=mysql_num_fields(res);
         //system("cls");
     printf("\n\n\t\t\t\t\tKINDERCARE SCHOOL ASSIGNMENT SYSTEM");
     printf("\n\n\n\t\t\t\xB2\xB2\xB2\xB2\xB2\xB2\xB2 WELCOME TO THE MAIN MENU \xB2\xB2\xB2\xB2\xB2\xB2\xB2");
-    printf("\n\n\t\t1.viewall\n\t\t2.checkstatus \n\t\t3.viewassignment () \n\t\t4.checkdates (shows if there is an assignment within a specified date range) \n\t\t5.requestactivation\n\n\n\n\n\t\t ");
+    printf("\n\n\t\t1.viewall\n\t\t2.checkstatus \n\t\t3.viewassignment () \n\t\t4.checkdates (shows if there is an assignment within a specified date range) \n\t\t5.requestactivation\n\t\t6.attempt\n\n\n\n\n\t\t ");
 
     char choice[20];
     char a[20]="viewall";
@@ -178,15 +178,15 @@ int num_fields=mysql_num_fields(res);
     char c[20]="viewassignment";
     char d[20]="checkdates";
     char e[20]="requestactivation";
-    char f[10]="START";
+    char f[10]="attempt";
     char g[10]="DISPLAY";
     printf("Enter choice from the menu list by typing the command as stated:");
     scanf("%s",choice);
     /*VIEWALL*/
     if(strcmp(a,choice)==0){
             printf("\n__________________________________________________________________\n");
-        printf("\n |ASSIGNMENT_ID\t\t|END_DATE\t\t|END_TIME\n");
- printf("__________________________________________________________________|\n");
+            printf("\n |ASSIGNMENT_ID\t\t|END_DATE\t\t|END_TIME\n");
+            printf("__________________________________________________________________|\n");
    if(mysql_query(conn,"SELECT assignmentID,end_date,end_time FROM assignment")){
     finish_with_error(conn);
    }
@@ -227,7 +227,7 @@ else {
     else if(strcmp(b,choice)==0){
         printf("\n\t\t\t|ASSIGNMENT_ID\t|ATTEMPTED\t|AVERAGE_SCORE\t|PERCENTAGE_MISSED\t|PERCENTAGE_ATTEMPTED\n");
 
-   if(mysql_query(conn,"SELECT assignmentID,average, FROM reports where user_code = \'")){
+   if(mysql_query(conn,"SELECT assignmentID,average, FROM results where user_code = \'")){
     finish_with_error(conn);
    }
    res=mysql_store_result(conn);
@@ -244,7 +244,22 @@ for(int i=0;i<num_fields;i++){
 printf("\n");
     }
 mysql_free_result(res);
-        goto label;
+       // goto label;
+       printf("Enter 1 to go to menu and other key to exit");
+        scanf("%d",&select);
+        if (select==1)
+        {
+
+            system("cls");
+            goto label;
+        }
+
+else {
+        system("cls");
+        //close();
+printf("do you wish to exit");
+        }
+
         //END OF CHECKSTATUS
     }
     /*VIEWASSIGNMENT*/
@@ -322,12 +337,12 @@ printf("do you wish to exit");
     else if(strcmp(e,choice)==0){
     conn = mysql_init(NULL);
     conn = mysql_real_connect(conn,"localhost","root","","my_db",0,NULL,0);
-    strcpy(query,"INSERT INTO activation_request (user_code,) VALUES(\'");
+   // strcpy(query,"INSERT INTO activation_request (user_code,) VALUES(\'");
     printf("\n ACTIVATION REQUEST SENT TO TEACHER");
 
         //ACTIVATION REQUEST SENDING
 
- printf("Enter 1 to go to menu and other key to exit:");
+ printf("\n\t\t\tEnter 1 to go to menu and other key to exit:");
    scanf("%d",&select);
    if (select==1)
         {

@@ -9,21 +9,12 @@
 		$record = mysqli_query($conn, "SELECT * FROM results WHERE id=$id");
 
 			$n = mysqli_fetch_array($record);
-			$assignment_id = $n['assignment_id'];
-			$pupil_id = $n['pupil_id'];
-            $result_mark = $n['result_mark'];
+			$assignment_id = $n['assignmentID'];
+			$pupil_id = $n['user_code'];
+            $result_mark = $n['average'];
 			$comment = $n['teacher_comment'];
 
-			
-			$rec = mysqli_query($conn, "SELECT * FROM pupils WHERE id=$pupil_id");
-			
-			
 
-			$p = mysqli_fetch_assoc($rec);
-
-			$user_code = $p['user_code'];
-			$fname = $p['fname'];
-		
 	}
 
 	
@@ -57,7 +48,7 @@ include('master.php');
 <form action="../../php/add_comment.php?id=<?php echo $id; ?>" method="POST">
 <div class="row">
 <div class="col-md-12">
-<h5 class="card-title" style="font-size:16px">user code: <span style="color:blue"><?php echo $user_code; ?></span>       First Name: <span style="color:blue"><?php echo $fname; ?></span></h5>
+<h5 class="card-title" style="font-size:16px">user code: <span style="color:blue; font: size 20px;"><?php echo $pupil_id; ?></span></h5>
 <div class="row">
 <div class="col-md-4">
 <div class="form-group">
